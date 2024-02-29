@@ -17,6 +17,7 @@ function allContent() {
     const amount = parseInt(input.value);
 
     if (amount >= 1 && amount <= 100) {
+      destroyBoxes();
       createBoxes(amount);
       input.value = '';
     }
@@ -33,16 +34,15 @@ function allContent() {
       boxesContainer.appendChild(box);
     }
   }
-
+  
   function destroyBoxes() {
     boxesContainer.innerHTML = '';
   }
 
-  function getRandomHexColor() {
-    return `#${Math.floor(Math.random() * 16777215)
-      .toString(16)
-      .padStart(6, '0')}`;
-  }
+  
 }
 
 
+
+
+ 
